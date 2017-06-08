@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wiki Ext",
+  "description": "This extension will allow you to see the first 200 characters of a Wikipedia article when you hover over the link. If you hover over a link and the title displays, just hover over again and the excerpt will show.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "wikipedialogo.png",
+    "default_popup": "popup.html"
+  },
+  	"content_scripts": [
+    {
+      "matches": ["http://*.wikipedia.org/wiki/*", "https://*.wikipedia.org/wiki/*"],
+      "js": ["myscript.js"]
+    }
+  ]
+}
